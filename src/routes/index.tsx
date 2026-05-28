@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ClientsStrip } from "@/components/ClientsStrip";
+import { HeroHome } from "@/components/HeroHome";
+import { BuildingsPreview } from "@/components/BuildingsPreview";
 
 export const Route = createFileRoute("/")({
   head: () => ({
