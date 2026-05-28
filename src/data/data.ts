@@ -31,12 +31,10 @@ export interface Building {
   tagline: string;
 }
 
-/** Genera un set de fotos placeholder para un módulo */
+/** Genera un set de fotos placeholder para un módulo (usa imagen real del cliente) */
 const fotos = (number: string, count = 4): ModulePhoto[] =>
   Array.from({ length: count }, (_, i) => ({
-    url: `https://placehold.co/1200x800/0B1F3A/F26B1F?text=Módulo+${encodeURIComponent(
-      number,
-    )}+%2F+Foto+${i + 1}`,
+    url: plazaImage,
     alt: `Foto ${i + 1} del módulo ${number}`,
   }));
 
