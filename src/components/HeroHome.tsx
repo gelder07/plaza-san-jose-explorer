@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import plazaHero from "@/assets/plaza-san-jose.jpg";
 
 /**
  * Hero principal del Home — inspirado en la referencia visual entregada por el cliente.
