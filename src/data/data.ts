@@ -3,6 +3,7 @@
  * Toda la información de edificios y módulos se mantiene aquí,
  * con tipado TypeScript estricto.
  */
+import plazaImage from "@/assets/plaza-san-jose.jpg";
 
 export type Status = "disponible" | "ocupado";
 
