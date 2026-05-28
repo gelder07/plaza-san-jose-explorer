@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { ClientsStrip } from "@/components/ClientsStrip";
+import { HeroHome } from "@/components/HeroHome";
+import { BuildingsPreview } from "@/components/BuildingsPreview";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,86 +26,11 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <>
-      {/* Hero principal */}
-      <section className="relative w-full h-screen overflow-hidden">
-        <motion.img
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          src="https://placehold.co/1920x1080/0B1F3A/F26B1F?text=Plaza+San+Jos%C3%A9"
-          alt="Plaza San José"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/80 to-navy/60" />
+      {/* Hero principal — inspirado en la referencia del cliente */}
+      <HeroHome />
 
-        <div className="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-center text-white">
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-sm md:text-base uppercase tracking-[0.4em] text-warm-orange font-semibold mb-4"
-          >
-            Corporación Bancentro · Managua
-          </motion.span>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight max-w-4xl leading-[1.05]"
-          >
-            Tu próxima <span className="text-warm-orange italic font-light">oficina</span>
-            <br />
-            empieza aquí.
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.9 }}
-            className="mt-6 text-lg md:text-xl text-white/85 max-w-2xl"
-          >
-            Módulos de oficinas comerciales en renta en el corazón de Managua.
-            Tres edificios, veinte módulos, un solo estándar de excelencia.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 1.1 }}
-            className="mt-10 flex flex-wrap gap-4"
-          >
-            <Link
-              to="/portafolio"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-warm-orange text-white font-semibold shadow-2xl shadow-warm-orange/40 hover:shadow-warm-orange/60 hover:scale-105 active:scale-95 transition-all"
-            >
-              Ver portafolio
-              <span>→</span>
-            </Link>
-            <Link
-              to="/contacto"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-white/30 text-white font-semibold hover:bg-white/10 hover:border-white transition-all"
-            >
-              Contáctanos
-            </Link>
-          </motion.div>
-        </div>
-
-        {/* Indicador scroll */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 text-xs uppercase tracking-widest flex flex-col items-center gap-2"
-        >
-          <span>Desliza</span>
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.6, repeat: Infinity }}
-            className="w-px h-10 bg-white/40"
-          />
-        </motion.div>
-      </section>
+      {/* Vista previa de edificios desde el inicio */}
+      <BuildingsPreview />
 
       {/* Clientes */}
       <ClientsStrip />

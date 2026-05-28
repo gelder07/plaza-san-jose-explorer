@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
+import plazaHero from "@/assets/plaza-san-jose.jpg";
 
 /**
  * Hero principal del Home — inspirado en la referencia visual entregada por el cliente.
@@ -24,7 +25,7 @@ export function HeroHome() {
         initial={{ scale: 1.12 }}
         animate={{ scale: 1 }}
         transition={{ duration: 2.2, ease: "easeOut" }}
-        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+        src={plazaHero}
         alt="Plaza San José — fachada"
         className="absolute inset-0 w-full h-full object-cover opacity-70"
       />

@@ -3,6 +3,7 @@
  * Toda la información de edificios y módulos se mantiene aquí,
  * con tipado TypeScript estricto.
  */
+import plazaImage from "@/assets/plaza-san-jose.jpg";
 
 export type Status = "disponible" | "ocupado";
 
@@ -30,12 +31,10 @@ export interface Building {
   tagline: string;
 }
 
-/** Genera un set de fotos placeholder para un módulo */
+/** Genera un set de fotos placeholder para un módulo (usa imagen real del cliente) */
 const fotos = (number: string, count = 4): ModulePhoto[] =>
   Array.from({ length: count }, (_, i) => ({
-    url: `https://placehold.co/1200x800/0B1F3A/F26B1F?text=Módulo+${encodeURIComponent(
-      number,
-    )}+%2F+Foto+${i + 1}`,
+    url: plazaImage,
     alt: `Foto ${i + 1} del módulo ${number}`,
   }));
 
@@ -44,7 +43,7 @@ export const buildings: Building[] = [
     id: "A",
     name: "Edificio A",
     totalModules: 6,
-    heroImage: "https://placehold.co/1920x1080/0B1F3A/ffffff?text=Edificio+A",
+    heroImage: plazaImage,
     tagline: "Espacios ejecutivos en planta baja con acceso directo",
     description:
       "Diseñado para empresas que valoran la visibilidad y el acceso peatonal inmediato. Cuenta con 6 módulos premium en planta baja.",
@@ -53,7 +52,7 @@ export const buildings: Building[] = [
     id: "B",
     name: "Edificio B",
     totalModules: 12,
-    heroImage: "https://placehold.co/1920x1080/2E7D5B/ffffff?text=Edificio+B",
+    heroImage: plazaImage,
     tagline: "Torre corporativa con vistas panorámicas",
     description:
       "Nuestro edificio insignia con 12 módulos distribuidos en varios niveles. Ideal para operaciones medianas y corporativas.",
@@ -62,7 +61,7 @@ export const buildings: Building[] = [
     id: "C",
     name: "Edificio C",
     totalModules: 2,
-    heroImage: "https://placehold.co/1920x1080/0F9B8E/ffffff?text=Edificio+C",
+    heroImage: plazaImage,
     tagline: "Espacios exclusivos para oficinas boutique",
     description:
       "Dos módulos amplios pensados para empresas que buscan privacidad, identidad propia y un entorno boutique.",
