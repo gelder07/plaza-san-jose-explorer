@@ -1,3 +1,8 @@
-name = "plaza-san-jose"
-compatibility_date = "2026-05-27"
-pages_build_output_dir = "./dist/client"
+name = "plaza-san-jose-explorer"
+compatibility_date = "2026-05-29"
+compatibility_flags = ["nodejs_compat"]
+main = "./dist/server/server.js"
+
+[assets]
+directory = "./dist/client"
+binding = "ASSETS"
