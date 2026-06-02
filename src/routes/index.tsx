@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { ClientsStrip } from "@/components/ClientsStrip";
+// import { ClientsStrip } from "@/components/ClientsStrip";
 import { HeroHome } from "@/components/HeroHome";
 import { BuildingsPreview } from "@/components/BuildingsPreview";
 
@@ -33,7 +33,7 @@ function Index() {
       <BuildingsPreview />
 
       {/* Clientes */}
-      <ClientsStrip />
+      {/* <ClientsStrip /> */}
 
       {/* Valores destacados */}
       <section className="bg-secondary py-20 md:py-28">

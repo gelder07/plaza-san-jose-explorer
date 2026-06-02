@@ -44,20 +44,24 @@ const bloques = [
 
 const valores = [
   {
-    titulo: "Integridad",
-    descripcion: "Actuamos con transparencia, ética y honestidad en cada interacción.",
+    titulo: "Centrada en el cliente",
+    descripcion: "Escuchamos, compredemos y actuammos para superar sus expectativas.",
   },
   {
-    titulo: "Excelencia",
-    descripcion: "Buscamos la mejora continua en nuestros espacios y procesos.",
+    titulo: " Enfocada en Resultados",
+    descripcion: "Trabajamos con propósito, midiendo y celebrando los logros",
   },
   {
-    titulo: "Compromiso",
-    descripcion: "Acompañamos a nuestros clientes en cada etapa de su crecimiento.",
+    titulo: "Emprendedora",
+    descripcion: "Innovamos, proponemos y buscamos nuevas formas de hacer mejor las cosas.",
   },
   {
-    titulo: "Innovación",
-    descripcion: "Incorporamos nuevas tecnologías y conceptos para anticiparnos al futuro.",
+    titulo: "Accountability",
+    descripcion: "Asumimos la responsabilidad de nuestros compromisos y decisiones.",
+  },
+  {
+    titulo: "Colaborativa",
+    descripcion: "Trabajamos en equipo, compartiendo ideas, talentos y objetivos comunes.",
   },
 ];
 
@@ -121,7 +125,7 @@ function QuienesSomos() {
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {valores.map((v, i) => (
               <motion.div
                 key={v.titulo}

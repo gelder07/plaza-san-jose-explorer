@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "@tanstack/react-router";
 import plazaHero from "@/assets/plaza-san-jose.jpg";
-
 /**
  * Hero principal del Home — inspirado en la referencia visual entregada por el cliente.
  * - Foto de fondo a pantalla completa con overlay oscuro
@@ -12,9 +11,8 @@ import plazaHero from "@/assets/plaza-san-jose.jpg";
 export function HeroHome() {
   const stats = [
     { label: "Edificios", value: "3" },
-    { label: "Ubicación", value: "Managua" },
-    { label: "Precios", value: "Desde $500" },
-    { label: "Tipo", value: "Comercial" },
+    { label: "Ubicación", value: "KM 7.5 Carretera Sur,Managua, Nicaragua" },
+    { label: "Tipo", value: "Corporativo" },
     { label: "Categoría", value: "Premium" },
   ];
 
@@ -76,7 +74,7 @@ export function HeroHome() {
           className="absolute left-6 right-6 md:left-10 md:right-10 bottom-20 md:bottom-16"
         >
           <div className="border-2 border-warm-orange/90 bg-navy/30 backdrop-blur-sm">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 divide-x divide-warm-orange/30">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 divide-x divide-warm-orange/30">
               {stats.map((s, i) => (
                 <motion.div
                   key={s.label}
@@ -85,9 +83,7 @@ export function HeroHome() {
                   transition={{ duration: 0.4, delay: 1.2 + i * 0.08 }}
                   className="px-5 md:px-7 py-5 md:py-6"
                 >
-                  <div className="text-sm md:text-base font-bold text-white">
-                    {s.label}
-                  </div>
+                  <div className="text-sm md:text-base font-bold text-white">{s.label}</div>
                   <div className="mt-2 text-sm md:text-base text-white/85 font-light">
                     {s.value}
                   </div>
