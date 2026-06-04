@@ -14,6 +14,23 @@ import a2Photo1 from "@/assets/moduloA/seccion1y2/A-2.jpg";
 import a2Photo2 from "@/assets/moduloA/seccion1y2/A-2(1).jpg";
 import a2Photo3 from "@/assets/moduloA/seccion1y2/A-2(2).jpg";
 
+// Módulo A — sección 3 a 6
+import a3Photo1 from "@/assets/moduloA/seccion3y6/A-3.jpg";
+import a3Photo2 from "@/assets/moduloA/seccion3y6/A-3-1.jpg";
+import a3Photo3 from "@/assets/moduloA/seccion3y6/A-3-2.jpg";
+import a3Photo4 from "@/assets/moduloA/seccion3y6/A-3-3.jpg";
+import a4Photo1 from "@/assets/moduloA/seccion3y6/A-3-4.jpg";
+import a4Photo2 from "@/assets/moduloA/seccion3y6/A-3-5.jpg";
+import a4Photo3 from "@/assets/moduloA/seccion3y6/A-3-6.jpg";
+import a4Photo4 from "@/assets/moduloA/seccion3y6/A-3-7.jpg";
+import a5Photo1 from "@/assets/moduloA/seccion3y6/A-3-8.jpg";
+import a5Photo2 from "@/assets/moduloA/seccion3y6/A-3-9.jpg";
+import a5Photo3 from "@/assets/moduloA/seccion3y6/A-3-10.jpg";
+import a5Photo4 from "@/assets/moduloA/seccion3y6/A-3-11.jpg";
+import a6Photo1 from "@/assets/moduloA/seccion3y6/A-3-12.jpg";
+import a6Photo2 from "@/assets/moduloA/seccion3y6/A-3-13.jpg";
+import a6Photo3 from "@/assets/moduloA/seccion3y6/A-3-14.jpg";
+
 // modulo A
 export type Status = "disponible" | "ocupado";
 
@@ -113,7 +130,7 @@ export const modules: Module[] = [
     number: "A-3",
     areaM2: 109.2,
     status: "disponible",
-    photos: fotos("A-103"),
+    photos: modulePhotos("A-3", [a3Photo1, a3Photo2, a3Photo3, a3Photo4]),
     description: "Módulo compacto perfecto para oficinas profesionales o consultorios.",
   },
   {
@@ -122,7 +139,7 @@ export const modules: Module[] = [
     number: "A-4",
     areaM2: 85,
     status: "disponible",
-    photos: fotos("A-104"),
+    photos: modulePhotos("A-4", [a4Photo1, a4Photo2, a4Photo3, a4Photo4]),
     description:
       "Planta amplia con sala de juntas y kitchenette, ideal para startups en crecimiento.",
   },
@@ -132,7 +149,7 @@ export const modules: Module[] = [
     number: "A-5",
     areaM2: 85,
     status: "disponible",
-    photos: fotos("A-105"),
+    photos: modulePhotos("A-5", [a5Photo1, a5Photo2, a5Photo3, a5Photo4]),
     description: "Módulo con acceso independiente y tres ambientes definidos.",
   },
   {
@@ -141,7 +158,7 @@ export const modules: Module[] = [
     number: "A-6",
     areaM2: 85,
     status: "disponible",
-    photos: fotos("A-106"),
+    photos: modulePhotos("A-6", [a6Photo1, a6Photo2, a6Photo3]),
     description:
       "Espacio premium con terraza privada. Pensado para empresas con presencia de marca.",
   },
