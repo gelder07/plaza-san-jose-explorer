@@ -68,6 +68,16 @@ import c2Photo5 from "@/assets/moduloC/C-2-5.jpg";
 import c2Photo6 from "@/assets/moduloC/C-2-6.jpg";
 import c2Photo7 from "@/assets/moduloC/C-2-7.jpg";
 
+// Parqueos
+import parqueoPhoto1 from "@/assets/parqueos/IMG_5868.JPG";
+import parqueoPhoto2 from "@/assets/parqueos/IMG_5869.JPG";
+import parqueoPhoto3 from "@/assets/parqueos/IMG_5871.JPG";
+import parqueoPhoto4 from "@/assets/parqueos/IMG_5879.JPG";
+import parqueoPhoto5 from "@/assets/parqueos/IMG_5883.JPG";
+import parqueoPhoto6 from "@/assets/parqueos/IMG_5884.JPG";
+import parqueoPhoto7 from "@/assets/parqueos/IMG_6072.jpg";
+import parqueoPhoto8 from "@/assets/parqueos/IMG_6125.jpg";
+
 // modulo A
 export type Status = "disponible" | "ocupado";
 
@@ -153,15 +163,20 @@ export const portfolioExtras: PortfolioExtra[] = [
   {
     id: "parqueos",
     name: "Parqueos",
-    heroImage: plazaImage,
+    heroImage: parqueoPhoto1,
     tagline: "Estacionamiento seguro y accesible para visitantes y inquilinos",
     description:
       "Áreas de parqueo distribuidas en Plaza San José, con acceso controlado y cercanía a los tres edificios. Ideal para equipos, clientes y operación diaria.",
-    photos: [
-      { url: plazaImage, alt: "Vista general de parqueos en Plaza San José" },
-      { url: plazaImage, alt: "Acceso vehicular a parqueos" },
-      { url: plazaImage, alt: "Zona de estacionamiento" },
-    ],
+    photos: modulePhotos("Parqueos", [
+      parqueoPhoto1,
+      parqueoPhoto2,
+      parqueoPhoto3,
+      parqueoPhoto4,
+      parqueoPhoto5,
+      parqueoPhoto6,
+      parqueoPhoto7,
+      parqueoPhoto8,
+    ]),
   },
   {
     id: "exteriores",
