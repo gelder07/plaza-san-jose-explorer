@@ -4,7 +4,17 @@
  * con tipado TypeScript estricto.
  */
 import plazaImage from "@/assets/plaza-san-jose.jpg";
+import edificioAImage from "@/assets/edificios/EDIFICIOA.jpg";
+import edificioBImage from "@/assets/edificios/EDIFICIOB.jpg";
+import edificioCImage from "@/assets/edificios/edificioC.jpg";
 
+// Módulo A — sección 1 y 2
+import a1Photo1 from "@/assets/moduloA/seccion1y2/A-1.jpg";
+import a2Photo1 from "@/assets/moduloA/seccion1y2/A-2.jpg";
+import a2Photo2 from "@/assets/moduloA/seccion1y2/A-2(1).jpg";
+import a2Photo3 from "@/assets/moduloA/seccion1y2/A-2(2).jpg";
+
+// modulo A
 export type Status = "disponible" | "ocupado";
 
 export interface ModulePhoto {
@@ -38,12 +48,19 @@ const fotos = (number: string, count = 4): ModulePhoto[] =>
     alt: `Foto ${i + 1} del módulo ${number}`,
   }));
 
+/** Convierte URLs importadas en el array de fotos del módulo */
+const modulePhotos = (number: string, urls: string[]): ModulePhoto[] =>
+  urls.map((url, i) => ({
+    url,
+    alt: `Foto ${i + 1} del módulo ${number}`,
+  }));
+
 export const buildings: Building[] = [
   {
     id: "A",
     name: "Edificio A",
     totalModules: 6,
-    heroImage: plazaImage,
+    heroImage: edificioAImage,
     tagline: "Espacios ejecutivos en planta baja con acceso directo",
     description:
       "Diseñado para empresas que valoran la visibilidad y el acceso peatonal inmediato. Cuenta con 6 módulos premium en planta baja.",
@@ -52,7 +69,7 @@ export const buildings: Building[] = [
     id: "B",
     name: "Edificio B",
     totalModules: 12,
-    heroImage: plazaImage,
+    heroImage: edificioBImage,
     tagline: "Torre corporativa con vistas panorámicas",
     description:
       "Nuestro edificio insignia con 12 módulos distribuidos en varios niveles. Ideal para operaciones medianas y corporativas.",
@@ -61,7 +78,7 @@ export const buildings: Building[] = [
     id: "C",
     name: "Edificio C",
     totalModules: 2,
-    heroImage: plazaImage,
+    heroImage: edificioCImage,
     tagline: "Espacios exclusivos para oficinas boutique",
     description:
       "Dos módulos amplios pensados para empresas que buscan privacidad, identidad propia y un entorno boutique.",
@@ -76,7 +93,7 @@ export const modules: Module[] = [
     number: "A-1",
     areaM2: 170,
     status: "disponible",
-    photos: fotos("A-101"),
+    photos: modulePhotos("A-1", [a1Photo1]),
     description:
       "Módulo esquinero con doble fachada de vidrio, ideal para showroom o atención al cliente.",
   },
@@ -86,7 +103,7 @@ export const modules: Module[] = [
     number: "A-2",
     areaM2: 86.132,
     status: "ocupado",
-    photos: fotos("A-102"),
+    photos: modulePhotos("A-2", [a2Photo2, a2Photo1,  a2Photo3]),
     description:
       "Espacio diáfano con recepción incluida y dos privados. Excelente iluminación natural.",
   },
@@ -94,11 +111,10 @@ export const modules: Module[] = [
     id: "A-3",
     buildingId: "A",
     number: "A-3",
-    areaM2: 109.20,
+    areaM2: 109.2,
     status: "disponible",
     photos: fotos("A-103"),
-    description:
-      "Módulo compacto perfecto para oficinas profesionales o consultorios.",
+    description: "Módulo compacto perfecto para oficinas profesionales o consultorios.",
   },
   {
     id: "A-4",
@@ -117,8 +133,7 @@ export const modules: Module[] = [
     areaM2: 85,
     status: "disponible",
     photos: fotos("A-105"),
-    description:
-      "Módulo con acceso independiente y tres ambientes definidos.",
+    description: "Módulo con acceso independiente y tres ambientes definidos.",
   },
   {
     id: "A-6",
@@ -139,8 +154,7 @@ export const modules: Module[] = [
     areaM2: 88.94,
     status: "ocupado",
     photos: fotos("B-201"),
-    description:
-      "Módulo en segundo nivel con vista al jardín interior de Plaza San José.",
+    description: "Módulo en segundo nivel con vista al jardín interior de Plaza San José.",
   },
   {
     id: "B-2",
@@ -149,8 +163,7 @@ export const modules: Module[] = [
     areaM2: 78.706,
     status: "ocupado",
     photos: fotos("B-202"),
-    description:
-      "Distribución open space con cabinas de reunión y zona de impresión.",
+    description: "Distribución open space con cabinas de reunión y zona de impresión.",
   },
   {
     id: "B-3",
@@ -159,8 +172,7 @@ export const modules: Module[] = [
     areaM2: 109.5,
     status: "ocupado",
     photos: fotos("B-203"),
-    description:
-      "Tres privados, sala de juntas para 8 personas y kitchenette completa.",
+    description: "Tres privados, sala de juntas para 8 personas y kitchenette completa.",
   },
   {
     id: "B-4",
@@ -169,8 +181,7 @@ export const modules: Module[] = [
     areaM2: 78.786,
     status: "ocupado",
     photos: fotos("B-204"),
-    description:
-      "Oficina ejecutiva ideal para profesionales independientes o estudios pequeños.",
+    description: "Oficina ejecutiva ideal para profesionales independientes o estudios pequeños.",
   },
   {
     id: "B-5",
@@ -179,8 +190,7 @@ export const modules: Module[] = [
     areaM2: 78.24,
     status: "ocupado",
     photos: fotos("B-301"),
-    description:
-      "Suite corporativa con recepción, 4 privados y sala de capacitación.",
+    description: "Suite corporativa con recepción, 4 privados y sala de capacitación.",
   },
   {
     id: "B-6",
@@ -189,8 +199,7 @@ export const modules: Module[] = [
     areaM2: 83.348,
     status: "ocupado",
     photos: fotos("B-302"),
-    description:
-      "Espacio versátil con tabiquería modular adaptable a su operación.",
+    description: "Espacio versátil con tabiquería modular adaptable a su operación.",
   },
   {
     id: "B-7",
@@ -199,8 +208,7 @@ export const modules: Module[] = [
     areaM2: 80,
     status: "ocupado",
     photos: fotos("B-303"),
-    description:
-      "Módulo con balcón privado, dos ambientes y baño propio.",
+    description: "Módulo con balcón privado, dos ambientes y baño propio.",
   },
   {
     id: "B-8",
@@ -209,8 +217,7 @@ export const modules: Module[] = [
     areaM2: 85,
     status: "ocupado",
     photos: fotos("B-304"),
-    description:
-      "Suite de gerencia con sala de espera, dos privados y archivo.",
+    description: "Suite de gerencia con sala de espera, dos privados y archivo.",
   },
   {
     id: "B-9",
@@ -219,8 +226,7 @@ export const modules: Module[] = [
     areaM2: 78.55,
     status: "ocupado",
     photos: fotos("B-401"),
-    description:
-      "Planta completa con vista panorámica a Managua, pensada para sedes regionales.",
+    description: "Planta completa con vista panorámica a Managua, pensada para sedes regionales.",
   },
   {
     id: "B-10",
@@ -229,8 +235,7 @@ export const modules: Module[] = [
     areaM2: 101.233,
     status: "ocupado",
     photos: fotos("B-402"),
-    description:
-      "Oficina premium con doble exposición y acabados en madera natural.",
+    description: "Oficina premium con doble exposición y acabados en madera natural.",
   },
   {
     id: "B-11",
@@ -239,8 +244,7 @@ export const modules: Module[] = [
     areaM2: 88.78,
     status: "ocupado",
     photos: fotos("B-403"),
-    description:
-      "Distribución mixta con dos privados grandes y open space para 10 puestos.",
+    description: "Distribución mixta con dos privados grandes y open space para 10 puestos.",
   },
   {
     id: "B-12",
@@ -249,8 +253,7 @@ export const modules: Module[] = [
     areaM2: 99.987,
     status: "ocupado",
     photos: fotos("B-404"),
-    description:
-      "Módulo compacto con excelente iluminación, listo para mudanza inmediata.",
+    description: "Módulo compacto con excelente iluminación, listo para mudanza inmediata.",
   },
 
   // Edificio C — 2 módulos
@@ -261,8 +264,7 @@ export const modules: Module[] = [
     areaM2: 253.41,
     status: "disponible",
     photos: fotos("C-101"),
-    description:
-      "Suite boutique con entrada independiente, recepción y patio interior privado.",
+    description: "Suite boutique con entrada independiente, recepción y patio interior privado.",
   },
   {
     id: "C-2",
@@ -271,8 +273,7 @@ export const modules: Module[] = [
     areaM2: 82.63,
     status: "ocupado",
     photos: fotos("C-102"),
-    description:
-      "Espacio exclusivo con identidad propia, acabados premium y parqueo dedicado.",
+    description: "Espacio exclusivo con identidad propia, acabados premium y parqueo dedicado.",
   },
 ];
 

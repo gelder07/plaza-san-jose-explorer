@@ -64,7 +64,7 @@ export function BuildingsPreview() {
               >
                 {/* Imagen de fondo */}
                 <motion.img
-                  src={plazaImg}
+                  src={b.heroImage}
                   alt={b.name}
                   className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
                   whileHover={{ scale: 1.08 }}
