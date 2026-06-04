@@ -78,6 +78,27 @@ import parqueoPhoto6 from "@/assets/parqueos/IMG_5884.JPG";
 import parqueoPhoto7 from "@/assets/parqueos/IMG_6072.jpg";
 import parqueoPhoto8 from "@/assets/parqueos/IMG_6125.jpg";
 
+// Exteriores
+import exteriorPhoto1 from "@/assets/exteriores/IMG_5850.JPG";
+import exteriorPhoto2 from "@/assets/exteriores/IMG_5852.jpg";
+import exteriorPhoto3 from "@/assets/exteriores/IMG_5853.JPG";
+import exteriorPhoto4 from "@/assets/exteriores/IMG_5859.JPG";
+import exteriorPhoto5 from "@/assets/exteriores/IMG_5867.JPG";
+import exteriorPhoto6 from "@/assets/exteriores/IMG_5868.JPG";
+import exteriorPhoto7 from "@/assets/exteriores/IMG_5895.JPG";
+import exteriorPhoto8 from "@/assets/exteriores/IMG_5899.jpg";
+import exteriorPhoto9 from "@/assets/exteriores/IMG_5901.jpg";
+import exteriorPhoto10 from "@/assets/exteriores/IMG_5953.jpg";
+import exteriorPhoto11 from "@/assets/exteriores/IMG_5988.jpg";
+import exteriorPhoto12 from "@/assets/exteriores/IMG_6019.jpg";
+import exteriorPhoto13 from "@/assets/exteriores/IMG_6022.jpg";
+import exteriorPhoto14 from "@/assets/exteriores/IMG_6024.jpg";
+import exteriorPhoto15 from "@/assets/exteriores/IMG_6028.jpg";
+import exteriorPhoto16 from "@/assets/exteriores/IMG_6110.jpg";
+import exteriorPhoto17 from "@/assets/exteriores/IMG_6116.jpg";
+import exteriorPhoto18 from "@/assets/exteriores/IMG_6117.jpg";
+import exteriorPhoto19 from "@/assets/exteriores/IMG_6121.jpg";
+
 // modulo A
 export type Status = "disponible" | "ocupado";
 
@@ -181,15 +202,31 @@ export const portfolioExtras: PortfolioExtra[] = [
   {
     id: "exteriores",
     name: "Exteriores",
-    heroImage: plazaImage,
+    heroImage: exteriorPhoto1,
     tagline: "Jardines, circulación peatonal y áreas comunes al aire libre",
     description:
       "Espacios al aire libre que acompañan la experiencia en oficinas: áreas verdes, senderos y zonas de encuentro que dan identidad y confort al complejo.",
-    photos: [
-      { url: plazaImage, alt: "Áreas verdes y exteriores de Plaza San José" },
-      { url: plazaImage, alt: "Circulación peatonal" },
-      { url: plazaImage, alt: "Zona común exterior" },
-    ],
+    photos: modulePhotos("Exteriores", [
+      exteriorPhoto1,
+      exteriorPhoto2,
+      exteriorPhoto3,
+      exteriorPhoto4,
+      exteriorPhoto5,
+      exteriorPhoto6,
+      exteriorPhoto7,
+      exteriorPhoto8,
+      exteriorPhoto9,
+      exteriorPhoto10,
+      exteriorPhoto11,
+      exteriorPhoto12,
+      exteriorPhoto13,
+      exteriorPhoto14,
+      exteriorPhoto15,
+      exteriorPhoto16,
+      exteriorPhoto17,
+      exteriorPhoto18,
+      exteriorPhoto19,
+    ]),
   },
 ];
 

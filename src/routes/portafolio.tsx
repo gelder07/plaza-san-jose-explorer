@@ -137,10 +137,6 @@ function Portafolio() {
               <h2 className="mt-3 text-3xl md:text-5xl font-extrabold tracking-tight">
                 Parqueos y exteriores
               </h2>
-              <p className="mt-4 text-base md:text-lg text-white/70 max-w-2xl">
-                No son edificios ni módulos en renta: son los espacios que acompañan la operación
-                diaria en Plaza San José.
-              </p>
             </motion.div>
 
             {portfolioExtras.map((e, i) => (

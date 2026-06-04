@@ -76,10 +76,6 @@ export function BuildingFullPanel({
           <BuildingIcon className="w-16 h-16 md:w-20 md:h-20" />
         </motion.div>
 
-        <span className="text-sm md:text-base uppercase tracking-[0.3em] text-warm-orange font-semibold mb-3">
-          Edificio · 0{index + 1}
-        </span>
-
         <motion.h2
           layoutId={`building-${building.id}-name`}
           className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight"
