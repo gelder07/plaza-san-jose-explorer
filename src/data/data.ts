@@ -6,7 +6,7 @@
 import plazaImage from "@/assets/plaza-san-jose.jpg";
 import edificioAImage from "@/assets/edificios/EDIFICIOA.jpg";
 import edificioBImage from "@/assets/edificios/EDIFICIOB.jpg";
-import edificioCImage from "@/assets/edificios/edificioC.jpg";
+import edificioCImage from "@/assets/edificios/EDIFICIOC.jpg";
 
 // Módulo A — sección 1 y 2
 import a1Photo1 from "@/assets/moduloA/seccion1y2/A-1.jpg";
