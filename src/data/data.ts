@@ -408,15 +408,6 @@ export const modules: Module[] = [
     number: "C-1",
     areaM2: 253.41,
     status: "disponible",
-    photos: modulePhotos("C-1", [c1Photo1, c1Photo2, c1Photo3]),
-    description: "Suite boutique con entrada independiente, recepción y patio interior privado.",
-  },
-  {
-    id: "C-2",
-    buildingId: "C",
-    number: "C-2",
-    areaM2: 82.63,
-    status: "ocupado",
     photos: modulePhotos("C-2", [
       c2Photo1,
       c2Photo2,
@@ -426,6 +417,17 @@ export const modules: Module[] = [
       c2Photo6,
       c2Photo7,
     ]),
+    description: "Suite boutique con entrada independiente, recepción y patio interior privado.",
+  },
+  {
+    id: "C-2",
+    buildingId: "C",
+    number: "C-2",
+    areaM2: 82.63,
+    status: "ocupado",
+    photos: modulePhotos("C-1", [c1Photo1, c1Photo2, c1Photo3]),
+
+   
     description: "Espacio exclusivo con identidad propia, acabados premium y parqueo dedicado.",
   },
 ];

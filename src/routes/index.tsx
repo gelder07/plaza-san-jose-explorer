@@ -70,8 +70,8 @@ function Index() {
                 ),
               },
               {
-                title: "Espacios flexibles",
-                desc: "Módulos desde 30 hasta 120 m², adaptables a la operación de tu empresa.",
+                title: "Continuidad Operativa",
+                desc: "Contamos con sistema de planta eléctrica y bomba de agua para asegurar el suministro ininterrumpido de recursos básicos.",
                 icon: (
                   <path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zm-9 9h7v7H4v-7zm9 0h7v7h-7v-7z" />
                 ),
