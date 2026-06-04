@@ -31,6 +31,43 @@ import a6Photo1 from "@/assets/moduloA/seccion3y6/A-3-12.jpg";
 import a6Photo2 from "@/assets/moduloA/seccion3y6/A-3-13.jpg";
 import a6Photo3 from "@/assets/moduloA/seccion3y6/A-3-14.jpg";
 
+// Módulo B — sección 1 a 6 (mismo espacio, fotos compartidas)
+import b1Photo from "@/assets/moduloB/seccion1y6/b1.jpg";
+import b1Photo1 from "@/assets/moduloB/seccion1y6/b1-1.jpg";
+import b1Photo2 from "@/assets/moduloB/seccion1y6/b1-2.jpg";
+import b1Photo3 from "@/assets/moduloB/seccion1y6/b1-3.jpg";
+import b1Photo4 from "@/assets/moduloB/seccion1y6/b1-4.jpg";
+import b1Photo5 from "@/assets/moduloB/seccion1y6/b1-5.jpg";
+import b1Photo6 from "@/assets/moduloB/seccion1y6/b1-6.jpg";
+import b1Photo7 from "@/assets/moduloB/seccion1y6/b1-7.jpg";
+import b1Photo8 from "@/assets/moduloB/seccion1y6/b1-8.jpg";
+import b1Photo9 from "@/assets/moduloB/seccion1y6/b1-9.jpg";
+import b7photo from "@/assets/moduloB/B-7.jpg";
+import b8photo from "@/assets/moduloB/B-8.jpg";
+import b9photo from "@/assets/moduloB/B-9.jpg";
+
+// Módulo B — sección 10 a 12
+import b10Photo1 from "@/assets/moduloB/seccion10y12/B10-1.jpg";
+import b10Photo2 from "@/assets/moduloB/seccion10y12/B10-2.jpg";
+import b10Photo3 from "@/assets/moduloB/seccion10y12/B10-3.jpg";
+import b10Photo4 from "@/assets/moduloB/seccion10y12/B10-4.jpg";
+import b10Photo5 from "@/assets/moduloB/seccion10y12/B10-5.jpg";
+import b10Photo6 from "@/assets/moduloB/seccion10y12/B10-6.jpg";
+import b10Photo7 from "@/assets/moduloB/seccion10y12/B10-7.jpg";
+import b10Photo8 from "@/assets/moduloB/seccion10y12/B10-8.jpg";
+
+// Módulo C
+import c1Photo1 from "@/assets/moduloC/C-1.jpg";
+import c1Photo2 from "@/assets/moduloC/C-1-2.jpg";
+import c1Photo3 from "@/assets/moduloC/C-1-3.jpg";
+import c2Photo1 from "@/assets/moduloC/C-2-1.jpg";
+import c2Photo2 from "@/assets/moduloC/C-2-2.jpg";
+import c2Photo3 from "@/assets/moduloC/C-2-3.jpg";
+import c2Photo4 from "@/assets/moduloC/C-2-4.jpg";
+import c2Photo5 from "@/assets/moduloC/C-2-5.jpg";
+import c2Photo6 from "@/assets/moduloC/C-2-6.jpg";
+import c2Photo7 from "@/assets/moduloC/C-2-7.jpg";
+
 // modulo A
 export type Status = "disponible" | "ocupado";
 
@@ -170,7 +207,7 @@ export const modules: Module[] = [
     number: "B-1",
     areaM2: 88.94,
     status: "ocupado",
-    photos: fotos("B-201"),
+    photos: modulePhotos("B-1", [b1Photo, b1Photo6, b1Photo7, b1Photo6]),
     description: "Módulo en segundo nivel con vista al jardín interior de Plaza San José.",
   },
   {
@@ -179,7 +216,7 @@ export const modules: Module[] = [
     number: "B-2",
     areaM2: 78.706,
     status: "ocupado",
-    photos: fotos("B-202"),
+    photos: modulePhotos("B-2", [b1Photo1, b1Photo7, b1Photo8, b1Photo7]),
     description: "Distribución open space con cabinas de reunión y zona de impresión.",
   },
   {
@@ -188,7 +225,7 @@ export const modules: Module[] = [
     number: "B-3",
     areaM2: 109.5,
     status: "ocupado",
-    photos: fotos("B-203"),
+    photos: modulePhotos("B-3", [b1Photo2, b1Photo8, b1Photo9, b1Photo8]),
     description: "Tres privados, sala de juntas para 8 personas y kitchenette completa.",
   },
   {
@@ -197,7 +234,7 @@ export const modules: Module[] = [
     number: "B-4",
     areaM2: 78.786,
     status: "ocupado",
-    photos: fotos("B-204"),
+    photos: modulePhotos("B-4", [b1Photo3, b1Photo9, b1Photo6, b1Photo9]),
     description: "Oficina ejecutiva ideal para profesionales independientes o estudios pequeños.",
   },
   {
@@ -206,7 +243,7 @@ export const modules: Module[] = [
     number: "B-5",
     areaM2: 78.24,
     status: "ocupado",
-    photos: fotos("B-301"),
+    photos: modulePhotos("B-5", [b1Photo4, b1Photo6, b1Photo7, b1Photo6]),
     description: "Suite corporativa con recepción, 4 privados y sala de capacitación.",
   },
   {
@@ -215,7 +252,7 @@ export const modules: Module[] = [
     number: "B-6",
     areaM2: 83.348,
     status: "ocupado",
-    photos: fotos("B-302"),
+    photos: modulePhotos("B-6", [b1Photo5, b1Photo7, b1Photo8, b1Photo7]),
     description: "Espacio versátil con tabiquería modular adaptable a su operación.",
   },
   {
@@ -224,7 +261,7 @@ export const modules: Module[] = [
     number: "B-7",
     areaM2: 80,
     status: "ocupado",
-    photos: fotos("B-303"),
+    photos: modulePhotos("B-7", [b7photo]),
     description: "Módulo con balcón privado, dos ambientes y baño propio.",
   },
   {
@@ -233,7 +270,7 @@ export const modules: Module[] = [
     number: "B-8",
     areaM2: 85,
     status: "ocupado",
-    photos: fotos("B-304"),
+    photos: modulePhotos("B-8", [b8photo]),
     description: "Suite de gerencia con sala de espera, dos privados y archivo.",
   },
   {
@@ -242,7 +279,7 @@ export const modules: Module[] = [
     number: "B-9",
     areaM2: 78.55,
     status: "ocupado",
-    photos: fotos("B-401"),
+    photos: modulePhotos("B-9", [b9photo]),
     description: "Planta completa con vista panorámica a Managua, pensada para sedes regionales.",
   },
   {
@@ -251,7 +288,7 @@ export const modules: Module[] = [
     number: "B-10",
     areaM2: 101.233,
     status: "ocupado",
-    photos: fotos("B-402"),
+    photos: modulePhotos("B-10", [b10Photo1, b10Photo2, b10Photo3, b10Photo4]),
     description: "Oficina premium con doble exposición y acabados en madera natural.",
   },
   {
@@ -260,7 +297,7 @@ export const modules: Module[] = [
     number: "B-11",
     areaM2: 88.78,
     status: "ocupado",
-    photos: fotos("B-403"),
+    photos: modulePhotos("B-11", [b10Photo5, b10Photo6, b10Photo1, b10Photo4]),
     description: "Distribución mixta con dos privados grandes y open space para 10 puestos.",
   },
   {
@@ -269,7 +306,7 @@ export const modules: Module[] = [
     number: "B-12",
     areaM2: 99.987,
     status: "ocupado",
-    photos: fotos("B-404"),
+    photos: modulePhotos("B-12", [b10Photo7, b10Photo3, b10Photo5, b10Photo6]),
     description: "Módulo compacto con excelente iluminación, listo para mudanza inmediata.",
   },
 
@@ -280,7 +317,7 @@ export const modules: Module[] = [
     number: "C-1",
     areaM2: 253.41,
     status: "disponible",
-    photos: fotos("C-101"),
+    photos: modulePhotos("C-1", [c1Photo1, c1Photo2, c1Photo3]),
     description: "Suite boutique con entrada independiente, recepción y patio interior privado.",
   },
   {
@@ -289,7 +326,15 @@ export const modules: Module[] = [
     number: "C-2",
     areaM2: 82.63,
     status: "ocupado",
-    photos: fotos("C-102"),
+    photos: modulePhotos("C-2", [
+      c2Photo1,
+      c2Photo2,
+      c2Photo3,
+      c2Photo4,
+      c2Photo5,
+      c2Photo6,
+      c2Photo7,
+    ]),
     description: "Espacio exclusivo con identidad propia, acabados premium y parqueo dedicado.",
   },
 ];
