@@ -22,6 +22,12 @@ export function ModuleStackView({
   const containerRef = useRef<HTMLDivElement>(null);
   const [current, setCurrent] = useState(0);
 
+  // Siempre iniciar en el primer módulo al abrir un edificio
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setCurrent(0);
+  }, [building.id]);
+
   // Detecta el índice actualmente visible
   useEffect(() => {
     const sections = containerRef.current?.querySelectorAll("[data-module-section]");

@@ -95,6 +95,16 @@ export interface Building {
   tagline: string;
 }
 
+/** Espacios del portafolio que no son edificios ni módulos */
+export interface PortfolioExtra {
+  id: "parqueos" | "exteriores";
+  name: string;
+  heroImage: string;
+  tagline: string;
+  description: string;
+  photos: ModulePhoto[];
+}
+
 /** Genera un set de fotos placeholder para un módulo (usa imagen real del cliente) */
 const fotos = (number: string, count = 4): ModulePhoto[] =>
   Array.from({ length: count }, (_, i) => ({
@@ -136,6 +146,35 @@ export const buildings: Building[] = [
     tagline: "Espacios exclusivos para oficinas boutique",
     description:
       "Dos módulos amplios pensados para empresas que buscan privacidad, identidad propia y un entorno boutique.",
+  },
+];
+
+export const portfolioExtras: PortfolioExtra[] = [
+  {
+    id: "parqueos",
+    name: "Parqueos",
+    heroImage: plazaImage,
+    tagline: "Estacionamiento seguro y accesible para visitantes y inquilinos",
+    description:
+      "Áreas de parqueo distribuidas en Plaza San José, con acceso controlado y cercanía a los tres edificios. Ideal para equipos, clientes y operación diaria.",
+    photos: [
+      { url: plazaImage, alt: "Vista general de parqueos en Plaza San José" },
+      { url: plazaImage, alt: "Acceso vehicular a parqueos" },
+      { url: plazaImage, alt: "Zona de estacionamiento" },
+    ],
+  },
+  {
+    id: "exteriores",
+    name: "Exteriores",
+    heroImage: plazaImage,
+    tagline: "Jardines, circulación peatonal y áreas comunes al aire libre",
+    description:
+      "Espacios al aire libre que acompañan la experiencia en oficinas: áreas verdes, senderos y zonas de encuentro que dan identidad y confort al complejo.",
+    photos: [
+      { url: plazaImage, alt: "Áreas verdes y exteriores de Plaza San José" },
+      { url: plazaImage, alt: "Circulación peatonal" },
+      { url: plazaImage, alt: "Zona común exterior" },
+    ],
   },
 ];
 
