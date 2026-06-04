@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { SectionHero } from "@/components/SectionHero";
+import quienesSomosHeroImage from "@/assets/parqueos/IMG_5884.JPG";
 
 export const Route = createFileRoute("/quienes-somos")({
   head: () => ({
@@ -71,7 +72,7 @@ function QuienesSomos() {
       <SectionHero
         title="Quiénes Somos"
         subtitle="Un desarrollo de Corporación Bancentro al servicio del crecimiento empresarial de Nicaragua."
-        image="https://placehold.co/1920x600/0B1F3A/F26B1F?text=Qui%C3%A9nes+Somos"
+        image={quienesSomosHeroImage}
         overlay="navy"
       />
 

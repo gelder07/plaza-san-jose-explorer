@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SectionHero } from "@/components/SectionHero";
 import { ContactForm } from "@/components/ContactForm";
 import { contact, whatsappLink } from "@/data/data";
+import contactHeroImage from "@/assets/moduloB/seccion1y6/b1-5.jpg";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
@@ -52,7 +53,7 @@ function Contacto() {
       <SectionHero
         title="Contáctenos"
         subtitle="Estamos listos para mostrarte los espacios y encontrar el módulo perfecto para tu empresa."
-        image="https://placehold.co/1920x600/2E7D5B/ffffff?text=Cont%C3%A1ctenos"
+        image={contactHeroImage}
         overlay="green"
       />
 
@@ -141,6 +142,37 @@ function Contacto() {
               </div>
             </motion.a>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16 md:py-24 border-t border-navy/10">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-xs uppercase tracking-[0.3em] text-warm-orange font-semibold">
+              Ubicación
+            </span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-navy">
+              Cómo llegar
+            </h2>
+            <p className="mt-3 text-dark-gray/70 max-w-2xl">
+              Plaza San José está en {contact.address}. Usa el mapa para planificar tu visita.
+            </p>
+            <div className="mt-8 aspect-[4/3] md:aspect-[16/9] min-h-[320px] rounded-2xl overflow-hidden shadow-xl border border-navy/10">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.9391455025843!2d-86.31827982636413!3d12.116316333055202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f71543f896a9369%3A0x59070d9bc23e1d1b!2sPlaza%20San%20Jos%C3%A9!5e0!3m2!1ses!2sni!4v1780551677511!5m2!1ses!2sni"
+                className="w-full h-full border-0"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Ubicación de Plaza San José en Google Maps"
+              />
+            </div>
+          </motion.div>
         </div>
       </section>
     </>
